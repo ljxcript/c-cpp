@@ -7,31 +7,3 @@
 //输出满足要求的最长子串长度
 
 
-while(line=readline()){
-    if (line.length == 1) {
-        print(1);
-        break;
-    } else {
-    	var result = 1;
-    	var current = 0;
-    	var next = 1;
-    	while(next < line.length) {
-        	var max = 1;
-    		while(line[next] && line[current] !== line[next]) {
-        		current = next;
-        		next++;
-            	max++;
-            	if (max > result) {
-            	    result = max;
-        	    }
-    		}
-	        current = next;
-    	    next++;
-	    }
-		print(result)
-        break;
-    }
-         
-   
-    
-}
